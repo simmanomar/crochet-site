@@ -1,0 +1,233 @@
+/* generell stil */ 
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFF8F0;
+    font-family: 'Gill Sans','Trebuchet MS', sans-serif;
+    color: #ed87dc; 
+}
+
+header {
+    background-color: #faaadb;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 15px; /*skapar luft mellan nav & header img*/
+
+}
+
+header img {
+    max-width: 30%;
+    margin-bottom: 10px;
+}
+
+/* ----------- NAVIGERING --------- */
+
+
+nav {
+    background-color: #fce4ec;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px;
+    width: 55%; /*anpassar sig efter innehåll */
+    margin: auto; /*centrerar */
+    
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    display: flex; /* gör att listan blir horisontell */
+    justify-content: center; /* centrerar nav */
+    margin: 20;
+    padding: 20;
+}
+
+nav ul li a { /* varje <a> länk i nav */
+    padding: 7px 20px;
+    font-size: 25;
+    text-decoration: none;
+    color: #ed87dc;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0,3s;
+    font-family:'Gill Sans','Trebuchet MS', sans-serif;
+    display: inline-block; 
+    border-radius: 5px;
+    
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    background-color: #ed87dc ;
+}
+
+
+.menu .selected { /* markerar den sida vi är på genom att sätta ett understreck */
+    text-decoration-line: underline;
+}
+
+ 
+h4 { /* generellt på alla sidor som har h4 */
+    text-align: center;
+    font-family: 'Gill Sans','Trebuchet MS', sans-serif;
+    font-size: 27px;
+}
+
+p { /* generellt på alla sidor med p som inte har en specifik div */
+    text-align: center; 
+    font-size: 19px;
+}
+
+ .welcome-image-img { /* virkbild på sida 1 */
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    max-width: 50%;
+    max-height: 30%;
+    }
+
+/*-------------- MASKOR ------------- */
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse; /* sätter ihop hela tabellens streck */
+    width: 40%;
+    margin-top: 15px;
+}
+
+td, th { /* table row & table head */
+    border: 2.5px solid #ed87dc;
+    text-align: left;
+    padding: 8px;
+}
+
+.maskor-layout {
+    display: flex;
+    justify-content:left;
+    align-items: flex-start;
+    margin: 40px 5%;
+    gap: 90px;
+}
+
+.maskor-text {
+    width: 45%;
+    text-align: right; /*gör så att texten blir jämnt utspridd på varje rad*/
+}
+
+
+.image-row { /*bildrad olika maskor*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 40px auto;
+    flex-wrap: nowrap; /*responsivt, tvingar alla till en rad */
+    max-width: none;
+}
+.image-1-img, .image-2-img, .image-3-img, .image-4-img{
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    border-color: #ed87dc;
+    border: 2px solid #ed87dc;
+    transition: transform 0.3s ease;
+}
+
+.image-1-img:hover, 
+.image-2-img:hover, 
+.image-3-img:hover, 
+.image-4-img:hover{
+transform: scale(1.5);
+}
+
+.image-1, .image-2, .image-3, .image-4 p { /* olika masktyper under bilderna*/
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/*-------------- MÖNSTER ------------- */
+
+.monster-text {
+    text-align: justify;
+    max-width: 750px;
+    margin: auto;
+}
+
+.image-row-2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 40px auto;
+    flex-wrap: nowrap;
+    max-width: 95%;
+}
+
+.image-row-2 img {
+    width: 150px;
+    height: auto;
+    border-radius: 50px;
+    object-fit: cover;
+    margin: 40px;
+}
+
+/*-------------- VERK ---------------- */
+
+
+.verk-text-1 p {
+    text-align: center;
+    max-width: 750px;
+    margin: 15px auto;
+    padding: 0 15px;
+}
+
+
+.verk-bilder { /* hela divrutan som innehåller alla bilder */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px auto;    
+}
+
+.verk-bild { /* hur varje bild i diven stylas */
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover; /* gör så att bilderna inte blir konstiga */
+    transition: transform 0.3 ease;
+}
+
+.verk-bild:hover {
+    transform: scale(1.3);
+}
+
+
+  /* ---------- FOOTER -------------- */
+
+.hr-footer { /*linjen i footern*/
+    border-top: 1px solid #ed87dc;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    width:90%;
+  }
+
+footer {
+    background-color: #faaadb;
+    color: white; /* textfärg footer */ 
+    padding: 30px 20px 60px; /* added bottom space */
+    text-align: center;
+    margin-top: 60px;
+    border-top: 4px solid #ed87dc;
+    font-family: 'Gill Sans', 'Trebuchet MS', sans-serif;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
